@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<p class="par"><font class="tut" color="">Тестовый текст</font></p>
+<img src="" id="rer"></img>
+</head>
+<script>
+(function () {
+var cart = ['jupiter.png', 'mars.jpg', 'saturn.jpg'] ;
+        var mas = ['Юпитер', 'Марс', 'Сатурн'];
+var cvet = ['red', 'yellow', 'blue'];
+        var n = 0;
+        var but = document.getElementsByTagName("button")[0];
+        var div = document.getElementsByTagName("div")[0];
+        document.querySelector('.par').onclick = function () {
+            document.querySelector('.par').innerHTML = mas[n % mas.length];
+document.querySelector('.tut').color = cvet[n % cvet.length];
+document.querySelector('#rer').src = cart[n % cart.length];
+            n++;
+        }
+        but.click();
+    })();
+
+</script>
+<body>
+
+</body>
+
+</html>
